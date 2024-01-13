@@ -289,6 +289,7 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
                 "user-agent": str(PyBookAgents.random_ugen()),
+                "viewport-width": "980"
             }
             I = C.get(
                 f"https://m.facebook.com/login/device-based/password/?uid={A}&flow=login_no_pin&refsrc=deprecated&_rdr"
